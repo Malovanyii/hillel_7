@@ -15,10 +15,29 @@
 // console.log(sum(7));
 
 // ДЗ 7.2. Добуток через карування
-function multiplyCurry(a) {
-    return function (b) {
-        return a + b;
-    };
+// function multiplyCurry(a) {
+//     return function (b) {
+//         return a + b;
+//     };
+// }
+
+// console.log(multiplyCurry(5)(2));
+
+// ДЗ 7.3. Функція з циклом
+function inputValue() {
+    let result;
+    for (let i = 1; i <= 10; i++) {
+        let num = prompt('Введіть число більше 100');
+
+        if (isNaN(num) || num > 100 || i === 10) {
+            result = num;
+            break;
+        } else if (num < 100) {
+            result = num;
+            continue;
+        }
+    }
+    console.log(result);
 }
 
-console.log(multiplyCurry(5)(2));
+inputValue();
